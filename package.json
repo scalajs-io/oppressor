@@ -1,0 +1,9 @@
+{
+  "name": "oppressor-scalajs",
+  "version": "0.3.1",
+  "private": true,
+  "dependencies": {
+    "oppressor": "0.0.1",
+    "source-map": "^0.5.6"
+  }
+}
