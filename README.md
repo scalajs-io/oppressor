@@ -1,22 +1,23 @@
 Oppressor API for Scala.js
 ================================
-This is a Scala.js type-safe binding for [Oppressor](https://www.npmjs.com/package/oppressor)
-
-A streaming http compression response negotiator.
+[oppressor](https://www.npmjs.com/package/oppressor) - streaming http compression response negotiator.
  
+### Description
+ 
+streaming http compression response negotiator 
 
-#### Build Dependencies
+### Build Dependencies
 
-* [ScalaJs.io v0.3.x](https://github.com/ldaniels528/scalajs.io)
+* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
-#### Build/publish the SDK locally
+### Build/publish the SDK locally
 
 ```bash
  $ sbt clean publish-local
 ```
 
-#### Running the tests
+### Running the tests
 
 Before running the tests the first time, you must ensure the npm packages are installed:
 
@@ -30,23 +31,27 @@ Then you can run the tests:
 $ sbt test
 ```
 
-#### Examples
+### Examples
 
 ```scala
-  val server = Http.createServer((req: ClientRequest, res: ServerResponse) => {
-    Fs.createReadStream("./npm/csv-parse/src/test/resources/data.txt")
-      .pipe(Oppressor(req))
-      .pipe(res)
-  })
-  server.listen(8000)
+import io.scalajs.nodejs.fs.Fs
+import io.scalajs.nodejs.http._
+import io.scalajs.npm.oppressor._
+
+val server = Http.createServer((req: ClientRequest, res: ServerResponse) => {
+Fs.createReadStream("./src/test/resources/data.txt")
+  .pipe(Oppressor(req))
+  .pipe(res)
+})
+server.listen(8000)
 ```
 
-#### Artifacts and Resolvers
+### Artifacts and Resolvers
 
-To add the Moment binding to your project, add the following to your build.sbt:  
+To add the `Oppressor` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "oppressor" % "0.3.0.3"
+libraryDependencies += "io.scalajs.npm" %%% "oppressor" % "0.0.1"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:

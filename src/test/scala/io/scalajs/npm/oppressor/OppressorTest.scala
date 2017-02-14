@@ -17,7 +17,7 @@ class OppressorTest extends FunSpec {
 
     it("should provide a server with compression") {
       val server = Http.createServer((req: ClientRequest, res: ServerResponse) => {
-        Fs.createReadStream("./npm/csv-parse/src/test/resources/data.txt")
+        Fs.createReadStream("./src/test/resources/data.txt")
           .pipe(Oppressor(req))
           .pipe(res)
       })

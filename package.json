@@ -1,6 +1,6 @@
 {
-  "name": "oppressor-scalajs",
-  "version": "0.3.1",
+  "name": "oppressor-sjs",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "oppressor": "0.0.1",
