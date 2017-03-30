@@ -51,7 +51,7 @@ server.listen(8000)
 To add the `Oppressor` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "oppressor" % "0.4.0-pre1"
+libraryDependencies += "io.scalajs.npm" %%% "oppressor" % "0.4.0-pre2"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
